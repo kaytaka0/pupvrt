@@ -1,0 +1,19 @@
+{
+  "name": "pupvrt",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "detect": "node run_detection.js",
+    "detect:debug": "node run_detection.js --debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.38.0",
+    "puppeteer": "^24.30.0"
+  }
+}

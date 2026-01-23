@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads | Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">URBAN</div>
+        <button class="hamburger" id="menu-btn">☰</button>
+        <nav id="mobile-menu" class="hidden">
+            <ul>
+                <li><a href="#">Drops</a></li>
+                <li><a href="#">Hoodies</a></li>
+                <li><a href="#">Sneakers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>STREET <br> DEFINED</h1>
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <div class="img-box"></div>
+                <!-- BUG: Visual - Text Overlap -->
+                <div class="info">
+                    <h3 class="title">Oversized Graphic Tee - Black Edition</h3>
+                    <p class="price"
+                        style="margin-top: -30px; background: red; color: white; z-index: 10; position: relative;">
+                        ¥6,500</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="img-box"></div>
+                <div class="info">
+                    <h3 class="title">Cargo Pants</h3>
+                    <p class="price">¥14,000</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Fashion | Latest Trends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">LUMINA</div>
+        <nav>
+            <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span>🔍</span>
+            <span>♡</span>
+            <span>🛒</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- BUG: Visual - Image source is broken -->
+        <section class="hero">
+            <img src="images/hero-banner-missing.jpg" alt="Spring Collection" class="hero-img">
+            <div class="hero-content">
+                <h1>Spring Collection 2025</h1>
+                <p>Discover the new you.</p>
+                <button>Shop Now</button>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Trending Now</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-placeholder" style="background-color: #f0f0f0; height: 300px;"></div>
+                    <h3>Classic Trench Coat</h3>
+                    <p>¥12,000</p>
+                    <!-- BUG: Functional - Button does nothing -->
+                    <button class="add-to-cart" id="broken-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="img-placeholder" style="background-color: #e0e0e0; height: 300px;"></div>
+                    <h3>Silk Blouse</h3>
+                    <p>¥8,500</p>
+                    <button class="add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="img-placeholder" style="background-color: #d0d0d0; height: 300px;"></div>
+                    <h3>Wide Leg Trousers</h3>
+                    <p>¥9,800</p>
+                    <button class="add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lumina Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

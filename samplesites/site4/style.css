@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding-bottom: 0;
+    /* No space for footer */
+}
+
+header {
+    background: #8d6e63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    min-height: 100vh;
+    /* Pushes footer down, but maybe too far or overlaps */
+    background: #efebe9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background: #5d4037;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background: #3e2723;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    /* Bug: Fixed position covering content or just weird */
+    position: fixed;
+    bottom: -20px;
+    /* Cut off */
+    width: 100%;
+}
