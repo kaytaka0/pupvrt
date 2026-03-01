@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse — あなたの次の一冊を見つけよう</title>
+    <meta name="description" content="BookVerse は最新の書籍から名作まで、幅広いジャンルの本を取り揃えたオンライン書店です。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">📖</span>
+                <span class="logo-text">Book<span class="logo-accent">Verse</span></span>
+            </a>
+            <div class="search-bar" id="searchBar">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" id="searchInput" placeholder="タイトル、著者、ISBNで検索...">
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="nav-icon" title="お気に入り">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="nav-badge">3</span>
+                </a>
+                <a href="#" class="nav-icon" title="カート">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="nav-badge">2</span>
+                </a>
+                <a href="#" class="nav-icon avatar" title="アカウント">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🎉 Winter Sale 開催中</div>
+            <h1>あなたの次の一冊を<br>見つけよう</h1>
+            <p>10万冊以上の書籍から、あなたにぴったりの本を。今なら対象書籍が最大50%OFF。</p>
+            <div class="hero-actions">
+                <a href="#recommended" class="btn btn-primary">おすすめを見る</a>
+                <a href="#sale" class="btn btn-outline">セール一覧</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-book fb-1"></div>
+            <div class="floating-book fb-2"></div>
+            <div class="floating-book fb-3"></div>
+        </div>
+    </section>
+
+    <!-- Genre filter bar -->
+    <section class="genre-bar">
+        <div class="genre-bar-inner">
+            <button class="genre-chip active">すべて</button>
+            <button class="genre-chip">文学・小説</button>
+            <button class="genre-chip">テクノロジー・IT</button>
+            <button class="genre-chip">アート・デザイン</button>
+            <button class="genre-chip">ビジネス</button>
+            <button class="genre-chip">サイエンス</button>
+            <button class="genre-chip">エッセイ</button>
+            <button class="genre-chip">自己啓発</button>
+        </div>
+    </section>
+
+    <main>
+        <!-- Recommended -->
+        <section class="shelf" id="recommended">
+            <div class="shelf-header">
+                <h2><span class="shelf-icon">🔥</span> 今週のおすすめ</h2>
+                <a href="#" class="shelf-more">すべて見る →</a>
+            </div>
+            <div class="shelf-wrapper">
+                <button class="scroll-btn scroll-left" aria-label="左にスクロール">‹</button>
+                <div class="shelf-track" id="shelf-recommended">
+                    <!-- 10 books injected by JS -->
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="右にスクロール">›</button>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="shelf" id="new-arrivals">
+            <div class="shelf-header">
+                <h2><span class="shelf-icon">🆕</span> 新着</h2>
+                <a href="#" class="shelf-more">すべて見る →</a>
+            </div>
+            <div class="shelf-wrapper">
+                <button class="scroll-btn scroll-left" aria-label="左にスクロール">‹</button>
+                <div class="shelf-track" id="shelf-new">
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="右にスクロール">›</button>
+            </div>
+        </section>
+
+        <!-- Sale -->
+        <section class="shelf" id="sale">
+            <div class="shelf-header">
+                <h2><span class="shelf-icon">💰</span> セール中</h2>
+                <a href="#" class="shelf-more">すべて見る →</a>
+            </div>
+            <div class="shelf-wrapper">
+                <button class="scroll-btn scroll-left" aria-label="左にスクロール">‹</button>
+                <div class="shelf-track" id="shelf-sale">
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="右にスクロール">›</button>
+            </div>
+        </section>
+
+        <!-- Literature -->
+        <section class="shelf" id="literature">
+            <div class="shelf-header">
+                <h2><span class="shelf-icon">📚</span> 文学・小説</h2>
+                <a href="#" class="shelf-more">すべて見る →</a>
+            </div>
+            <div class="shelf-wrapper">
+                <button class="scroll-btn scroll-left" aria-label="左にスクロール">‹</button>
+                <div class="shelf-track" id="shelf-literature">
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="右にスクロール">›</button>
+            </div>
+        </section>
+
+        <!-- Technology -->
+        <section class="shelf" id="technology">
+            <div class="shelf-header">
+                <h2><span class="shelf-icon">💻</span> テクノロジー・IT</h2>
+                <a href="#" class="shelf-more">すべて見る →</a>
+            </div>
+            <div class="shelf-wrapper">
+                <button class="scroll-btn scroll-left" aria-label="左にスクロール">‹</button>
+                <div class="shelf-track" id="shelf-tech">
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="右にスクロール">›</button>
+            </div>
+        </section>
+
+        <!-- Art & Design -->
+        <section class="shelf" id="art">
+            <div class="shelf-header">
+                <h2><span class="shelf-icon">🎨</span> アート・デザイン</h2>
+                <a href="#" class="shelf-more">すべて見る →</a>
+            </div>
+            <div class="shelf-wrapper">
+                <button class="scroll-btn scroll-left" aria-label="左にスクロール">‹</button>
+                <div class="shelf-track" id="shelf-art">
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="右にスクロール">›</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>📖 Book<span class="logo-accent">Verse</span></h3>
+                <p>あなたの読書体験を、もっと豊かに。</p>
+            </div>
+            <div class="footer-col">
+                <h4>ショッピング</h4>
+                <ul>
+                    <li><a href="#">新着書籍</a></li>
+                    <li><a href="#">ベストセラー</a></li>
+                    <li><a href="#">セール</a></li>
+                    <li><a href="#">予約受付中</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>カテゴリ</h4>
+                <ul>
+                    <li><a href="#">文学・小説</a></li>
+                    <li><a href="#">テクノロジー・IT</a></li>
+                    <li><a href="#">アート・デザイン</a></li>
+                    <li><a href="#">ビジネス</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>サポート</h4>
+                <ul>
+                    <li><a href="#">ヘルプセンター</a></li>
+                    <li><a href="#">配送について</a></li>
+                    <li><a href="#">返品ポリシー</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BookVerse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
