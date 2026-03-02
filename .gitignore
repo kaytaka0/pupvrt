@@ -1,2 +1,3 @@
 node_modules
 BUG_REPORT_*.md
+.env

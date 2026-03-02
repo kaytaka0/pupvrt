@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { GoogleGenAI, ThinkingLevel } from "@google/genai";
 
 class LLMClient {
